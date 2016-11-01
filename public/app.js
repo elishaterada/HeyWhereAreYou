@@ -12,7 +12,7 @@ angular
   .constant('_', _)
   .constant('moment', moment)
   .constant('mapboxgl', mapboxgl)
-  .constant('mapboxToken', 'pk.eyJ1IjoiZWxpc2hhdGVyYWRhIiwiYSI6ImNpdXZzdnJudTA0ZTkzMW4wYjQzaDVjbmQifQ.H_pdii7uRaIyOdKh8R124Q')
+  .constant('mapboxToken', 'pk.eyJ1IjoiZWxpc2hhdGVyYWRhIiwiYSI6ImNpdXo1c2JkejA1NnkyemwxdGJhcWVqbW8ifQ.wYvVE-loAnN1jq2WlqnR3g')
 
 function config (
   $animateProvider,
@@ -91,10 +91,10 @@ function config (
 
 function run () {
   var config = {
-    apiKey: 'AIzaSyALYBJL00KKoXGx7Vdhqv3TzJVtB7sy22Y',
-    authDomain: 'hideseek-4a8f6.firebaseapp.com',
-    databaseURL: 'https://hideseek-4a8f6.firebaseio.com',
-    storageBucket: 'hideseek-4a8f6.appspot.com'
+    apiKey: 'AIzaSyDq7YJhhf8hX24SppdPgK3DZTK-pZPJN9Q',
+    authDomain: 'hey-where-are-you.firebaseapp.com',
+    databaseURL: 'https://hey-where-are-you.firebaseio.com',
+    storageBucket: 'hey-where-are-you.appspot.com'
   }
 
   firebase.initializeApp(config)

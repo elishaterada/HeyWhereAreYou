@@ -1,4 +1,4 @@
-# App Title
+# Hey Where Are You
 
 [![Build Status](https://travis-ci.org/elishaterada/angular-material-boilerplate.svg?branch=master)](https://travis-ci.org/elishaterada/angular-material-boilerplate)
 
