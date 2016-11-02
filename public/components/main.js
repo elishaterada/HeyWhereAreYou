@@ -5,52 +5,16 @@ angular
     controller: MainCtrl
   })
 
-function MainCtrl ($mdSidenav, $timeout, $log, $state, Auth, $firebaseObject) {
+function MainCtrl ($mdSidenav, $timeout, $state) {
   var ctrl = this
 
   ctrl.toggleLeftNav = buildDelayedToggler('leftNav')
 
   ctrl.$onInit = function () {
-    firebaseAuth()
-  }
-
-  ctrl.signIn = function () {
-    Auth.$signInWithRedirect('google').then(function (firebaseUser) {
-      $log.debug(firebaseUser)
-    }).catch(function (error) {
-      $log.debug(error)
-    })
-  }
-
-  ctrl.signOut = function () {
-    Auth.$signOut().then(function () {
-      // Sign-out successful.
-    }, function (error) {
-      $log.debug(error)
-    })
   }
 
   ctrl.goTo = function (route) {
     $state.go(route)
-  }
-
-  function firebaseAuth () {
-    Auth.$onAuthStateChanged(function (firebaseUser) {
-      if (firebaseUser) {
-        ctrl.user = $firebaseObject(
-          firebase.database().ref('profiles/' + firebaseUser.uid)
-        )
-
-        ctrl.user.$loaded(function() {
-          // Save current user profile
-          ctrl.user.displayName = firebaseUser.displayName
-          ctrl.user.email = firebaseUser.email
-          ctrl.user.photoURL = firebaseUser.photoURL
-
-          ctrl.user.$save()
-        })
-      }
-    })
   }
 
   function debounce (func, wait, context) {

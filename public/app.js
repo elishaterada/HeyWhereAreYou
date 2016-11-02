@@ -74,12 +74,12 @@ function config (
   // Landing
     .state('landing', {
       url: '/',
-      component: 'landing',
-      resolve: {
-        user: function (Auth) {
-          return Auth.$waitForSignIn()
-        }
-      }
+      component: 'landing'
+    })
+
+    .state('sessions', {
+      url: '/sessions/:id',
+      component: 'session'
     })
 
     // Not Found
@@ -101,22 +101,4 @@ function run () {
 }
 
 function AppCtrl () {
-}
-
-// Auth Factory
-angular
-  .module('app')
-  .factory('Auth', Auth)
-
-function Auth ($firebaseAuth) {
-  return $firebaseAuth()
-}
-
-// Profiles
-angular
-  .module('app')
-  .factory('Profiles', Profiles)
-
-function Profiles () {
-  return firebase.database().ref('profiles')
 }

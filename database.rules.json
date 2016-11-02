@@ -1,15 +1,9 @@
 {
   "rules": {
-    "geolocations": {
+    "sessions": {
       ".read": true,
       "$uid": {
-        ".write": "$uid === auth.uid"
-      }
-    },
-    "profiles": {
-      ".read": true,
-      "$uid": {
-        ".write": "$uid === auth.uid"
+        ".write": true
       }
     }
   }
