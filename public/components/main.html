@@ -31,18 +31,6 @@
         <div class="md-title link" ng-click="goTo('landing')">Hey Where Are You</div>
       </div>
       <div flex="25" layout="row" layout-align="end center">
-        <div>
-          <md-button
-            ng-if="!$ctrl.user"
-            ng-click="$ctrl.signIn()">
-            <md-tooltip>Google Sign-In</md-tooltip>
-            Sign In
-          </md-button>
-          <md-list-item ng-if="$ctrl.user">
-            <img ng-src="{{ $ctrl.user.photoURL }}"
-                 class="md-avatar mg0">
-          </md-list-item>
-        </div>
       </div>
     </div>
   </md-toolbar>

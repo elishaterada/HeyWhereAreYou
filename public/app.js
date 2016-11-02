@@ -3,6 +3,7 @@ angular
     'ngAnimate',
     'ngMaterial',
     'ngAria',
+    'ngStorage',
     'ui.router',
     'firebase'
   ])

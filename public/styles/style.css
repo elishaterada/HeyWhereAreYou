@@ -142,28 +142,18 @@ md-icon.md-custom-theme.md-48 {
   margin-top: -5px;
   margin-left: -5px;
   border-radius: 50%;
-  opacity: 0.75;
 }
 
 .marker.me {
+  z-index: 1;
   background-color: #039BE5; /* Light Blue 600 */
-  box-shadow: 0 0 10px #29B6F6; /* Light Blue 400 */
+  box-shadow: 0 0 5px #29B6F6; /* Light Blue 400 */
+  opacity: 1;
 }
 
 .marker.other {
+  z-index: 0;
   background-color: #FFB300; /* Amber 600 */
-  box-shadow: 0 0 10px #FFCA28; /* Amber 400 */
-  animation: fadeinout 10s ease 1;
-}
-
-@keyframes fadeinout {
-  0% {
-    opacity: 0.75;
-  }
-  80% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 0;
-  }
+  box-shadow: 0 0 5px #FFCA28; /* Amber 400 */
+  opacity: 0.75;
 }

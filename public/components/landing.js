@@ -5,7 +5,7 @@ angular
     controller: LandingCtrl
   })
 
-function LandingCtrl ($firebaseArray) {
+function LandingCtrl ($firebaseArray, $state) {
   var ctrl = this
 
   ctrl.$onInit = function () {
@@ -18,6 +18,8 @@ function LandingCtrl ($firebaseArray) {
 
     session.$add({
       created: moment().format()
+    }).then(function (ref){
+      $state.go('sessions', {id: ref.key})
     })
   }
 
